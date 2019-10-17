@@ -69,14 +69,14 @@ export default {
     async loginHandler(e) {
       e.preventDefault();
       //get方式
-      // const res = await this.$http.get("http://localhost:3001/api/login", {
+      // const res = await this.$http.get("/api/login", {
       //   params: {
       //     username: this.model.username,
       //     password: this.model.password
       //   }
       // });
       //post方式
-      const res = await this.$http.post("http://localhost:3001/api/login", {
+      const res = await this.$http.post("/api/login", {
         username: this.model.username,
         password: this.model.password
       });

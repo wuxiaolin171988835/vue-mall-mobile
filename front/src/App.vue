@@ -54,7 +54,7 @@ export default {
       this.$router.push(val);
     },
     async logOut() {
-      await this.$http.get("http://localhost:3001/api/logout");
+      await this.$http.get("/api/logout");
     },
     showBadge(label) {
       return label === "Cart" && this.cartTotal > 0;

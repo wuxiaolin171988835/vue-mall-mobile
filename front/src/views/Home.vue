@@ -103,11 +103,9 @@ export default {
     }
   },
   async created() {
-    const bannersRes = await this.$http.get(
-      "http://localhost:3001/api/banners"
-    );
+    const bannersRes = await this.$http.get("/api/banners");
     this.banners = bannersRes.data.list;
-    const goodsRes = await this.$http.get("http://localhost:3001/api/goods");
+    const goodsRes = await this.$http.get("/api/goods");
     this.goods = goodsRes.data.list;
     this.goodsKeys = goodsRes.data.keys;
     this.selectedGoodsKeys = [...this.goodsKeys];

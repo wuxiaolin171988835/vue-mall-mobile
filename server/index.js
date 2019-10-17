@@ -1,8 +1,6 @@
 var express = require('express');
 var app = express();
-var cors = require('cors');
 var bodyParser = require('body-parser');
-app.use(cors());
 // 解析 application/json
 app.use(bodyParser.json());
 // 解析 application/x-www-form-urlencoded
